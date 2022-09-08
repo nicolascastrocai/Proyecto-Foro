@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesionn </title>
+    <link rel="stylesheet" href="../front/css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contenedorBarra">
+                <li class="logo-conteiner">
+                    <b class="logo"> M.A.X JUEGOS </b> 
+                </li>
+                <li><a href="../index.html">FORO</a></li>
+                <li><a href="iniciarSesion.html">INICIAR SESION</a></li>
+                <li><a href="registro.html">REGISTRARTE</a></li> 
+                <li><a href="iniciarSesion.html">USUARIO_ANONIMO</a></li>
+            </div>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="iniciarSesion-bienvenido">Entra en el mundo de <b class="logo"> M.A.X JUEGOS </b> </h1>
+        <div class="contenedor-form">
+         <form action="">
+            <h3>Iniciar Sesion</h3>
+
+            <div class="grupo">
+                <input type="text" required id="usuario">
+                <label for="usuario">Usuario</label>
+            </div>
+
+            <div class="grupo">
+                <input type="password" required id="contraseñaLogin">
+                <label for="contraseñaLogin">contraseña</label>
+            </div>
+
+            <button type="submit" class="btn"><a style="text-decoration:none;color:white" href="">Iniciar Sesion</a></button>
+         </form>
+        </div>
+    </div>
+    </main>
+
+    <script type="module">
+        const formulario=document.querySelector('form')
+        const user=document.querySelector('#usuario')
+        formulario.addEventListener('submit',function(e){
+            e.preventDefault()
+            console.log(user.value);
+        })
+    </script>
+</body>
+</html>

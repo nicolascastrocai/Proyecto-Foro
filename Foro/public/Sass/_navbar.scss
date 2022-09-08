@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    
+   .contenedorBarra{
+        width: 100%;
+        display: flex;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        background-color:black;
+
+        .logo-conteiner{
+            width: 100px;
+            cursor:default;
+        }
+
+        .logo{
+            color: #FFFFFF;
+            background: #333333;
+            text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+            cursor: default;
+           
+        }
+
+        li{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style:initial;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            padding: 5px;
+
+            a{
+                text-decoration: none;
+                color: #FFF;
+                cursor: pointer;
+            }
+
+            a:hover{
+                color: #B59F95 ;
+            }
+            
+            
+            
+        }
+        li:hover{
+            color: #B59F95 ;
+        }
+        
+     
+        
+        
+    }
+}

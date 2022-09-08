@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav .contenedorBarra {
+  width: 100%;
+  display: flex;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background-color: black;
+}
+nav .contenedorBarra .logo-conteiner {
+  width: 100px;
+  cursor: default;
+}
+nav .contenedorBarra .logo {
+  color: #FFFFFF;
+  background: #333333;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+  cursor: default;
+}
+nav .contenedorBarra li {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+}
+nav .contenedorBarra li a {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+nav .contenedorBarra li a:hover {
+  color: #B59F95;
+}
+nav .contenedorBarra li:hover {
+  color: #B59F95;
+}
+
+main {
+  background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+}
+
+.slider {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
+}
+.slider ul li {
+  width: 100%;
+  list-style: none;
+}
+.slider ul li img {
+  width: 100%;
+  height: 610px;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+section {
+  margin: auto;
+  border: 5px #000A19 outset;
+  width: 85%;
+  background-color: white;
+}
+section .inicio-foro {
+  background-color: rgb(10, 10, 10);
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.9738270308) 0%, rgb(34, 34, 34) 42%, rgb(18, 18, 18) 52%, rgb(30, 30, 30) 64%, rgb(57, 57, 57) 100%, rgb(255, 255, 255) 100%);
+  margin: auto;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%;
+  margin-top: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+section .inicio-foro h1 {
+  text-align: center;
+}
+section .ultimos-temas {
+  margin: 10px auto;
+  width: 90%;
+  display: flex;
+  gap: 20px;
+}
+section .ultimos-temas h2 {
+  background: linear-gradient(220.55deg, #24CFC5 0%, #001C63 100%);
+  width: 170px;
+  padding: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+section .ultimos-temas .buscar {
+  padding: 10px;
+}
+section .ultimos-temas .buscar input {
+  width: 240px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+}
+section .contenedor-botones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section .contenedor-botones .boton1 {
+  background-color: #2C528B;
+  color: white;
+  width: 30px;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer;
+  font-weight: 900;
+}
+section .contenedor-botones .boton {
+  width: 30px;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 900;
+  cursor: pointer;
+}
+section .contenedor-botones .boton:hover {
+  background-color: #2C528B;
+  color: white;
+}
+section .contenedor-botones button {
+  background: linear-gradient(220.55deg, #24CFC5 0%, #001C63 100%);
+  padding: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+section .contenedor-botones button:hover {
+  box-shadow: 0 0 6px 0 rgba(35, 34, 34, 0.8);
+}
+section .titulo-foro {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}
+section .titulo-foro h3 {
+  color: #2C528B;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+section .catalogo-foro {
+  display: flex;
+  background: rgb(10, 10, 10);
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.9738270308) 0%, rgb(34, 34, 34) 42%, rgb(18, 18, 18) 52%, rgb(30, 30, 30) 64%, rgb(57, 57, 57) 100%, rgb(255, 255, 255) 100%);
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+section .catalogo-foro h4 {
+  color: white;
+  padding: 7px;
+  padding-top: 10px;
+  padding-left: 90px;
+  font-size: 15px;
+  font-weight: 400;
+}
+section .catalogo-foro .h4-2 {
+  padding-left: 170px;
+}
+section .catalogo-foro .h4-3 {
+  padding-left: 250px;
+}
+section .contenedor {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  height: 60px;
+  padding: 10px;
+  padding-top: 15px;
+  border-bottom: silver solid 1px;
+}
+section .contenedor .link-foro {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2C528B;
+  cursor: pointer;
+  width: 250px;
+}
+section .contenedor .link-foro:hover {
+  color: #2C528B;
+  text-decoration: underline;
+}
+section .contenedor p {
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+section .contenedor .respuestas-foro {
+  color: #2C528B;
+}
+section .contenedor .contenedor-2 {
+  display: flex;
+  gap: 15px;
+  height: 35px;
+  width: 15%;
+}
+section .contenedor .contenedor-2 .equipo {
+  background-color: #2C528B;
+  color: white;
+  padding: 5px;
+  height: 15px;
+  width: 50px;
+  text-align: center;
+}
+section .contenedor .contenedor-2 img {
+  width: 70px;
+  height: 62px;
+  margin-bottom: 60px;
+}
+
+.contenedor-registro {
+  margin: auto;
+  width: 75%;
+}
+.contenedor-registro div h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
+  padding: 5px;
+}
+.contenedor-registro div h1 .logo {
+  color: #FFFFFF;
+  background: #333333;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+  cursor: default;
+}
+.contenedor-registro div h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
+  padding: 7px;
+}
+
+.contenedor-form {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  align-items: center;
+}
+.contenedor-form form {
+  background-color: white;
+  padding: 40px 0;
+  box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width: 40%;
+}
+.contenedor-form form h3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenedor-form form .grupo {
+  position: relative;
+  margin: 35px;
+}
+.contenedor-form form .grupo input {
+  background: none;
+  color: #6c6c6c;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(230, 90, 90, 0.4039215686);
+}
+.contenedor-form form .grupo input:focus {
+  outline: none;
+  color: rgb(94, 91, 93);
+}
+.contenedor-form form .grupo label {
+  color: #6c6c6c;
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+.contenedor-form form .grupo input:focus ~ label,
+.contenedor-form form .grupo input:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #2196f3;
+}
+.contenedor-form form .btn {
+  font-family: "robot";
+  border: none;
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  color: white;
+  background-color: #2196f3;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.contenedor-form form .btn:hover {
+  box-shadow: 0 0 6px 0 rgba(35, 34, 34, 0.8);
+}
+
+.iniciarSesion-bienvenido {
+  text-align: center;
+  padding-top: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: azure;
+}
+.iniciarSesion-bienvenido .logo {
+  color: #FFFFFF;
+  background: #333333;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+  cursor: default;
+}/*# sourceMappingURL=main.css.map */

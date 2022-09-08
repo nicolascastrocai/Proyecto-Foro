@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../front/css/main.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="contenedorBarra">
+                <li class="logo-conteiner">
+                    <b class="logo"> M.A.X JUEGOS </b> 
+                </li>
+                <%if(user){%> 
+                    <li><a href="/index">FORO</a></li>
+                    <li><a href="/perfil"><%= user.usuario %></a></li>
+                <%  } else{ %>
+                    <li><a href="/index">FORO</a></li>
+                    <li><a href="/login">INICIAR SESION</a></li>
+                    <li><a href="/register">REGISTRARTE</a></li> 
+                    
+                <% }%>
+            </div>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor__perfil">
+            <div class="img-contenedor__perfil">
+                <img class="img-perfil" src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg" alt="">
+            </div>
+    
+            <div class="contenedor-informacion">
+                <div id="usuarioPerfil" class="user">Hola <%= user.usuario %> </div>
+                <div class="info">Aca en M.A.X JUEGOS podras compartir toda la informacion,problemas,consejos y guias de todos
+                    juegos que tu quieras y contar con las respuestas de otros compañeros gamer que te ayudaran o tomaran tus
+                    consejos.   ¡DIVIERTETE!
+
+                </div>
+                <div></div>
+            </div>
+    
+            <div class="contenedor-form__perfil">
+                <form action="/perfil" method="post">
+
+                    <div>
+                        <label for="plataforma">PLATAFORMA</label>
+                        <input type="text" required id="plataforma" name="plataforma">
+                        
+                    </div>
+    
+                    <div>
+                        <label for="nombreJuego">JUEGO</label>
+                        <input type="text" required id="nombreJuego" name="nombreJuego">
+                        
+                    </div>
+    
+                    <div>
+                        <label for="palabrasClaves">CONTENIDO</label>
+                        <input type="text" required name="palabrasClaves" id="palabrasClaves">
+                        
+                    </div>
+    
+                    <div>
+                        <label for="contenidoInformacion">INFORMACION COMPLETA</label>
+                        <textarea name="contenidoInformacion" id="contenidoInformacion" cols="30" rows="10"></textarea>
+    
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn">Enviar</button>
+                        <button type="button" class="btn"><a href="/cerrar">Cerrar Sesion</a> </button>
+                    </div>
+                    
+                </form>
+
+                
+                
+            </div>
+        </div>
+        
+
+    </main>
+    
+    <script>
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro</title>
+    <link rel="stylesheet" href="../front/css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contenedorBarra">
+                <li class="logo-conteiner">
+                    <b class="logo"> M.A.X JUEGOS </b> 
+                </li>
+                <%if(user){%> 
+                    <li><a href="../index.html">FORO</a></li>
+                    <li><a href="/perfil"><%= user.usuario %></a></li>
+                <%  } else{ %>
+                    <li><a href="/index">FORO</a></li>
+                    <li><a href="/login">INICIAR SESION</a></li>
+                    <li><a href="/register">REGISTRARTE</a></li> 
+                    
+                <% }%>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="slider">
+            <ul>
+                <li><img src="https://phantom-marca.unidadeditorial.es/edac3c5d42148f1eef453b70b1622440/resize/1200/f/webp/assets/multimedia/imagenes/2022/05/17/16527898813482.jpg" alt="multiverso"></li>
+                <li><img src="https://compass-ssl.xbox.com/assets/d7/29/d7299dda-c153-4b60-9040-a6266b22ffd6.jpg?n=Assassins-Creed-Valhalla_GLP-Page-Hero-0_NCSA_1083x609_02.jpg" alt=""></li>
+                <li><img src="https://i.blogs.es/8e4885/maxresdefault/1366_2000.jpeg" alt=""></li>
+                <li><img src="https://as01.epimg.net/meristation/imagenes/2021/07/20/avances/1626758869_049177_1626771602_noticia_normal.jpg" alt=""></li>
+            </ul>
+        </div>
+
+
+        <section>
+            <div class="inicio-foro">
+                <h1>
+                    FOROS
+                </h1>
+            </div>
+
+            <div class="ultimos-temas">
+                <h2>Temas Activos</h2>
+                <div class="buscar">
+                   <p>🔎<input type="text" placeholder="Buscar en este Foro" required></p> 
+                </div>
+            </div>
+
+            <div class="titulo-foro">
+                <h3>Foro de Video Juegos</h3>
+                
+            </div>
+
+            <div>
+                <div class="contenedor-botones">
+                    <button>ATRAS</button>
+                    <p class="boton1">1</p>
+                    <p class="boton">2</p>
+                    <p class="boton">3</p>
+                    <p class="boton">4</p>
+                    <p class="boton">5</p>
+                    <p class="boton">6</p>
+                    <p class="boton">7</p>
+                    <p class="boton">8</p>
+                    <p class="boton">9</p>
+                    <button>SIGUIENTE</button>
+                </div>
+            </div>
+
+
+            
+
+            <div class="catalogo-foro">
+                <h4>VIDEO JUEGO</h4>
+                <h4 class="h4-2">TEMA</h4>
+                <h4 class="h4-3">AUTOR</h4>
+                <h4>RESPUESTA</h4>
+            </div>
+
+            
+
+
+
+            <div id="contenedorForo">
+                
+            </div>
+
+            
+
+             <div>
+                <div class="contenedor-botones">
+                    <button>ATRAS</button>
+                    <p class="boton1">1</p>
+                    <p class="boton">2</p>
+                    <p class="boton">3</p>
+                    <p class="boton">4</p>
+                    <p class="boton">5</p>
+                    <p class="boton">6</p>
+                    <p class="boton">7</p>
+                    <p class="boton">8</p>
+                    <p class="boton">9</p>
+                    <button>SIGUIENTE</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        
+
+
+console.log('hola');
+
+let contenedor=document.getElementById('contenedorForo')
+
+console.log('hola');
+
+fetch('http://localhost:3000/indexx')
+.then(response => response.json())
+.then(data =>{
+    console.log(data.length);
+    for (let i = 0; i < data.length; i++) {
+        contenedor.innerHTML+=`
+    <div class="contenedor">
+    <div class="contenedor-2">
+        <p class="equipo">${data[i].plataforma}</p>
+        <img src=https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gamer-logo-design-template-37e446de36be773126cf82985342d962_screen.jpg?ts=1605006137 alt="">
+        <p class="juego">${data[i].juego}</p>
+     </div>
+   
+    <div >
+        <p class="link-foro">${data[i].contenido}</p>
+    </div>
+   
+    <div>
+        <p>usuario</p>
+    </div>
+   
+    <div>
+        <p class="respuestas-foro">respuestas</p>
+    </div>
+ </div>
+    `
+
+        
+    }
+
+    
+})
+    </script>
+</body>
+</html>

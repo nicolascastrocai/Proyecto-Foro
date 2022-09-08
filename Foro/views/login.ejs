@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesionn </title>
+    <link rel="stylesheet" href="../front/css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contenedorBarra">
+                <li class="logo-conteiner">
+                    <b class="logo"> M.A.X JUEGOS </b> 
+                </li>
+                <%if(user){%> 
+                   
+                    <li><a href="/login">INICIAR SESION</a></li>
+                    <li><a href="/register">REGISTRARTE</a></li>
+                    
+                    
+                <%  } else{ %>
+                    
+                    <li><a href="/login">INICIAR SESION</a></li>
+                    <li><a href="/register">REGISTRARTE</a></li> 
+                    
+                <% }%>
+                
+                
+            </div>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="iniciarSesion-bienvenido">Entra en el mundo de <b class="logo"> M.A.X JUEGOS </b> </h1>
+        <div class="contenedor-form">
+         <form action="/login" method="post">
+            <h3>Iniciar Sesion</h3>
+
+            <div class="grupo">
+                <input type="text" required id="usuarios" name="usuarios">
+                <label for="usuarios">Usuario</label>
+                <%if(mensaje2){%> 
+                    <div><%= mensaje2 %></div>
+                <%  } %>
+            </div>
+
+            <div class="grupo">
+                <input type="password" required id="contraseña" name="contraseña">
+                <label for="contraseña">contraseña</label>
+                <%if(mensaje2){%> 
+                    <div><%= mensaje3 %></div>
+                <%  } %>
+            </div>
+            
+
+            <button type="submit" class="btn">Iniciar Sesion </button>
+         </form>
+        </div>
+    </div>
+    </main>
+
+    
+</body>
+</html>

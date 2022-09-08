@@ -1,0 +1,227 @@
+@import '_variables';
+
+section{
+    margin: auto;
+    border: 5px  #000A19 outset ;
+    width: 85%;
+    background-color: white;
+
+    .inicio-foro{
+        background-color: $color1;
+        background: $gradiente1;
+        margin: auto;
+        border-radius: 5px;
+        padding: 10px;
+        width: 90%;
+        margin-top: 10px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+
+        h1{
+            text-align: center;
+        }
+    }
+
+    .ultimos-temas{
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        gap: 20px   ;   
+        
+
+        h2{
+            background:$gradiente2;
+            width: 170px;
+            padding: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .buscar{
+            padding: 10px;
+
+            input{
+                width: 240px;
+                height: 40px;
+                padding: 0 20px;
+                font-size: 18px;
+                color: black;
+                outline: none;
+                border: 1px solid silver;
+                border-radius: 30px;
+            }
+        }
+
+
+    }
+
+    .contenedor-botones{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .boton1{
+            background-color: $color2;
+            color: white;
+            width: 30px;
+            height: 25px;
+            text-align: center;
+            padding-top: 5px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        .boton{
+            width: 30px;
+            height: 25px;
+            text-align: center;
+            padding-top: 5px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .boton:hover{
+            background-color: $color2;
+            color: white;
+
+            
+
+        }
+
+        button{
+            background:$gradiente2;
+            padding: 5px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        button:hover{
+            box-shadow: 0 0 6px 0 rgba(35, 34, 34, 0.8);
+        }
+        
+    }
+
+    .titulo-foro{
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        h3{
+            color:#2C528B;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+    }
+
+    .catalogo-foro{
+        display: flex;
+        background: rgb(10,10,10);
+        background: linear-gradient(0deg, rgba(10,10,10,0.9738270308123249) 0%, rgba(34,34,34,1) 42%, rgba(18,18,18,1) 52%, rgba(30,30,30,1) 64%, rgba(57,57,57,1) 100%, rgba(255,255,255,1) 100%);
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        
+        
+
+
+        h4{
+            color: white;
+            padding: 7px;
+            padding-top: 10px;
+            padding-left: 90px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .h4-2{
+            padding-left: 170px;
+        }
+
+        .h4-3{
+            padding-left: 250px;
+        }
+
+
+    }
+
+    .contenedor{
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        margin: 0 auto;
+        height: 60px;
+        padding: 10px;
+        padding-top: 15px;
+        border-bottom: silver solid 1px;
+        
+      
+
+        .link-foro{
+            text-transform: uppercase;
+            font-weight: 700;
+            color:$color2 ;;
+            cursor: pointer;
+            width: 250px;
+
+        }
+
+        .link-foro:hover{
+            color: $color2;
+            text-decoration: underline;
+        }
+
+        p{
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            
+        }
+
+        .respuestas-foro{
+        color:$color2 ;
+        }
+
+        .contenedor-2{
+            display: flex;
+            gap: 10px;
+            height: 35px;
+            width: 26%;
+            
+           .equipo{
+            background-color: $color2;
+            color: white;
+            padding: 5px;
+            height: 15px;
+            width: 50px;
+            text-align: center;
+           }
+
+           .juego{
+            width:80%;
+            
+            color: black;
+            
+            
+           }
+
+           img{
+            width: 70px;
+            height: 62px;
+            margin-bottom: 60px;
+           }
+        }
+    }
+}
