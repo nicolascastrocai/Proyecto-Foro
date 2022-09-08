@@ -50,6 +50,12 @@
                 <form action="/perfil" method="post">
 
                     <div>
+                        <label for="usuario">USUARIO</label>
+                        <input type="text" required id="usuario" name="usuario" value="<%= user.usuario %>" readonly>
+                        
+                    </div>
+
+                    <div>
                         <label for="plataforma">PLATAFORMA</label>
                         <input type="text" required id="plataforma" name="plataforma">
                         
@@ -58,6 +64,12 @@
                     <div>
                         <label for="nombreJuego">JUEGO</label>
                         <input type="text" required id="nombreJuego" name="nombreJuego">
+                        
+                    </div>
+
+                    <div>
+                        <label for="nombreJuego">PALABRA CLAVE</label>
+                        <input type="text" required id="clave" name="clave">
                         
                     </div>
     

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuestas</title>
+    <link rel="stylesheet" href="../front/css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="contenedorBarra">
+                <li class="logo-conteiner">
+                    <b class="logo"> M.A.X JUEGOS </b> 
+                </li>
+                <%if(user){%> 
+                    <li><a href="/index">FORO</a></li>
+                    <li><a href="/perfil"><%= user.usuario %></a></li>
+                <%  } else{ %>
+                    
+                <% }%>
+                
+                
+            </div>
+            
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <div id="contenedorRespuesta" class="contenedor-respuesta">
+            <div class="titulo">
+                <h1>Descubre las maravillas que te puede compartit <b class="logo"> M.A.X JUEGOS </b> </h1>
+            </div>
+
+            <div class="contenido-user">
+                <label for="contenidoInformacion">Infromacion Clave especial: <b style="color:#2196f3;font-size: 25px;"><%=dato.clave %></b> </label>
+                <textarea name="contenidoInformacion" id="contenidoInformacion" cols="30" rows="10" readonly><%=dato.informacion %></textarea>
+            </div>
+            <div>
+               
+    
+                <div>
+                    <form action="/respuestas/<%=dato._id %>" method="post">
+                        <div>
+                            <label for="respuesta">Escribe tu respuesta</label>
+                            <textarea style="margin-bottom:20px ;" name="respuesta" id="respuesta" cols="30" rows="10"></textarea>
+
+                        </div>
+                         <div>
+                            <label  for="info">Coloque la CLAVE</label>
+                            <input style="padding:10px; color: #6c6c6c;border-radius: 10px;margin-top: 10px;" type="text" name="info" id="info" required>
+                         </div>           
+
+                        <div>
+                            <button type="submit" class="btn">Responder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <script>
+        let contenedor=document.getElementById('contenedorRespuesta')
+        
+        fetch('http://localhost:3000/hola')
+        .then(response => response.json())
+        .then(data =>{
+        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+        contenedor.innerHTML+=`<div class="contenido-user2">
+                <label for="contenidoRespuesta">Las Respuestas. CLAVE de Posteo: ${data[i].info}   </label>
+                <textarea name="contenidoRespuesta" id="contenidoRespuesta" cols="30" rows="10" >${data[i].respuesta} </textarea>
+            </div>
+   
+    `
+
+        
+    }
+
+    
+})
+    
+    </script>
+</body>
+</html>
