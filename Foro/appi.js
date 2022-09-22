@@ -3,7 +3,8 @@ const cors=require('cors')
 const session = require('express-session')
 const flash=require('connect-flash')
 const app = express()
-const port = 3000
+//cambiado de 3000 a 27017
+var port = process.env.PORT || 27017
 const bp = require('body-parser')
 const path = require("path")
 const passport=require('passport')

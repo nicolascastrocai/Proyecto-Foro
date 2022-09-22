@@ -4,7 +4,9 @@
   "description": "",
   "main": "appi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node appi.js",
+    "dev": "nodemon appi.js"
+
   },
   "author": "Nicoals Castro",
   "license": "ISC",
@@ -21,6 +23,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.2",
     "install": "^0.13.0",
     "nodemon": "^2.0.19",
     "pm": "^2.2.6"
